@@ -6,6 +6,8 @@
 ![alt text](https://i.imgur.com/NPARW5M.png)
 
 ### Participantes:
+- Matias Gabriel Quinzan Linares
+- Mateo Guzman
 - Alex Gonzalez
 - Nahuel Liendro
 
