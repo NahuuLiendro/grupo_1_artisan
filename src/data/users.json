@@ -1,0 +1,18 @@
+[
+ {
+  "id": 1,
+  "nombre": "alex",
+  "apellido": "gonzalez",
+  "email": "feralexgon11@gmail.com",
+  "clave": "$2a$10$JlYAizN1GFAW6SHpQetJlOH2uvUsKvi9TbtTXEMLglSvmv4nPO6x2",
+  "foto": "imagen-perfil--1681319636207.jpeg"
+ },
+ {
+  "id": 2,
+  "nombre": "abby",
+  "apellido": "sanchez",
+  "email": "abbys9239@gmail.com",
+  "clave": "$2a$10$cuegQjQVJd9KLNwPRJ7BDubDwhcQ3cj8WQVKJ4k9ltVb4SOzUPrnW",
+  "foto": "imagen-perfil--1681564812312.webp"
+ }
+]

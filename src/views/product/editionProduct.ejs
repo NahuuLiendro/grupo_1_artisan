@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/916727133d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/editionProduct.css">
+    <title>Edicion de Producto</title>
+</head>
+<body>
+    <article>
+        <form action="" id="search-bar">
+            <input type="text" placeholder="Buscar producto por id">
+            <button type="submit" class="fa-sharp fa-solid fa-magnifying-glass logo_lupa"></button>
+        </form>
+        <form action="/product/" method="post" enctype="multipart/form-data">
+            <label for="product-name">Nombre del producto</label>
+            <input type="text" name="nombre" id="product-name">
+            <label for="product-description">Descripcion del producto</label>
+            <textarea type="text" name="descripcion" id="product-description"></textarea>
+            <label for="product-price">Precio del producto</label>
+            <input type="number" name="precio" id="product-price">
+            <label for="product-category">Categoria del producto</label>
+            <select name="categoria" id="product-category">
+                <option value="Animales">Animales</option>
+                <option value="Paisajes">Paisajes</option>
+                <option value="Ilustraciones">Ilustraciones</option>
+                <option value="Vehiculos">Vehiculos</option>
+            </select>
+            <label for="product-image" id="custom-file-upload">
+                Elegir imagen del producto
+                <input type="file" name="product-image" id="product-image" accept=".png,.jpg,.webp,.jpeg">
+            </label>
+            <button type="submit">Editar Producto</button>
+        </form>
+    </article>
+</body>
+</html>

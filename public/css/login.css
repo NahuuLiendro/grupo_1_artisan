@@ -1,0 +1,174 @@
+/*Importamos Montserrat*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/*Importamos Rajdhani*/
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
+body {
+    font-family: "Rajdhani";
+    color: aliceblue;
+    background: linear-gradient(90deg, #000 50%, #ffffff 50%);
+    display: flex;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+    padding: 6.25%;
+    padding-top: 3.125%;
+    padding-bottom: 0;
+    width: 40%;
+}
+
+.loginBtn {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    padding: 4px;
+    background-color: white;
+    align-items: flex-start;
+    color: black;
+    width: 90%;
+    height: 64px;
+    border-radius: 8px;
+    font-family: "Montserrat";
+    margin-top: 38px;
+    font-size: 17px;
+    border: grey solid 3px;
+}
+
+input {
+    display: flex;
+    width: 90%;
+    height: 48px;
+    border-radius: 8px;
+    font-family: "Montserrat";
+    margin-top: 38px;
+    font-size: 17px;
+    border: #ffffff solid 3px;
+    caret-color: black;
+}
+
+input:focus-visible {
+    border-color: white;
+    border-style: solid;
+    outline: none;
+}
+
+a,
+p {
+    color: #676767;
+    font-family: "Montserrat";
+    font-size: 16px;
+    text-decoration: none;
+    display: inline;
+}
+
+span {
+    margin-top: 30px;
+    margin-bottom: 64px;
+}
+
+a {
+    color: white;
+}
+
+button {
+    display: flex;
+    background-color: grey;
+    border: none;
+    border-radius: 8px;
+    color: black;
+    font-family: "Rajdhani";
+    font-size: 36px;
+    width: 100%;
+    height: 90px;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+button :hover {
+    background-color:red;
+    transition: 500ms
+}
+
+h1 {
+    color: white;
+    font-family: "Rajdhani";
+    font-weight: 500;
+    font-size: 36px;
+}
+
+div {
+    width: fit-content;
+    max-width: 320px;
+    position: relative;
+    left: 12.5%;
+}
+
+img {
+    width: 35%;
+    align-items: center;
+    padding: 6.25%;
+    padding-top: 3.125%;
+    padding-bottom: 0;
+}
+
+#vl {
+    border-left: 40px solid #676767;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+}
+
+
+.loginBtnImg {
+    width: 48px;
+    height: 48px;
+}
+
+.loginBtnTxt {
+    display: inline;
+}
+
+@media (max-width: 900px) {
+    div {
+        width: 80%;
+        height: 64px;
+        position: static;
+        max-width: none;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    body {
+        background: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form {
+        width: 80%;
+    }
+
+    .loginBtn {
+        justify-content: center;
+        align-items: center;
+        max-width: 64px;
+    }
+
+    .loginBtnImg {
+        display: block;
+    }
+
+    .loginBtnTxt {
+        display: none;
+    }
+}

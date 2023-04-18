@@ -1,0 +1,9 @@
+<label id="<%= dato.categoria %>" class="category-label"><%= dato.categoria %></label>
+<section class="swiper products">
+    <div class="swiper-wrapper ">
+            <%- include("product", {datosHome: dato}); %>
+    </div>
+    <!-- Botones de navegación-->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</section>

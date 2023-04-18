@@ -1,0 +1,18 @@
+ /* Barra de desplazamiento */
+ ::-webkit-scrollbar {
+    width: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 8px 0px 24px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 32px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #101010;
+}

@@ -1,0 +1,54 @@
+/*Importamos Montserrat*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/*Importamos Rajdhani*/
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+}
+
+article img{
+    background-color: white;
+    padding: 64px;
+    width: 600px;
+    padding-top: 0px;
+    margin-top: 16px;
+    position: absolute;
+}
+
+p{
+    font-family: "Montserrat";
+    color: white;
+    background-color: black;
+    padding: 15px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+section{
+    background-color: white;
+    display: inline-block;
+    position: relative;
+    padding: 15px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-right: 90px;
+    margin-left: 570px ;
+    border-radius: 20px;
+}
+
+a{
+    color: white;
+    text-decoration: dotted;
+}
+
+.centrar{
+    text-align: center;
+}

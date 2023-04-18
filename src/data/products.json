@@ -1,0 +1,118 @@
+[
+ {
+  "id": 1,
+  "nombre": "El Dorado",
+  "descripcion": "Se dice que esta imagen produce riqueza infinita, ¿Tú que opinas? 🤔",
+  "administrador": "Gemma Da-Silva",
+  "imagen": "/catalogo/paisaje.png",
+  "categoria": "Paisaje",
+  "precio": 1200
+ },
+ {
+  "id": 2,
+  "nombre": "Galaxya",
+  "descripcion": "Los cientificos dicen que es un portal intergalactico que no se sabe donde lleva, o quiza es un simple diujo 😋",
+  "administrador": "Emilio Riquelme",
+  "imagen": "/catalogo/paisaje2.png",
+  "categoria": "Paisaje",
+  "precio": 1000
+ },
+ {
+  "id": 3,
+  "nombre": "Risco Montañoso",
+  "descripcion": "¿Es un risco o una Montaña? con razon las buenas lenguas dicen: 'las apariencias engañan 😳'",
+  "owner": "Angel Aguilera",
+  "imagen": "/catalogo/paisaje3.png",
+  "categoria": "Paisaje",
+  "precio": 700
+ },
+ {
+  "id": 4,
+  "nombre": "Pinguitastico",
+  "descripcion": "Este NFT es un claro ejemplo de como serian los pinguinos si es que nos llegan a dominar el mundo 🌍",
+  "administrador": "Pere Gil",
+  "imagen": "/catalogo/animal.png",
+  "categoria": "Animales",
+  "precio": 1500
+ },
+ {
+  "id": 5,
+  "nombre": "El perro apocaliptico",
+  "descripcion": "El objetivo de este animal, es poder sobrevivir a un apocalipsis. Si es que llega, claro... 🐶",
+  "administrador": "Gaspar Puig",
+  "imagen": "/catalogo/animal2.png",
+  "categoria": "Animales",
+  "precio": 900
+ },
+ {
+  "id": 6,
+  "nombre": "Mostro",
+  "descripcion": "Les presento al MOSTRO, primo hermano de pie grande, pero ¡ten cuidado!, su tumaño es engañoso 👀",
+  "administrador": "Meritxell Morillo",
+  "imagen": "/catalogo/animal3.png",
+  "categoria": "Animales",
+  "precio": 2200
+ },
+ {
+  "id": 7,
+  "nombre": "Mr Pensante",
+  "descripcion": "¿Una pintura o ilusion optica?¿Una persona o el universo devorando un planeta? 😵‍💫",
+  "administrador": "Amelia Berrocal",
+  "imagen": "/catalogo/ilustracion.png",
+  "categoria": "Ilustraciones",
+  "precio": 1600
+ },
+ {
+  "id": 8,
+  "nombre": "Sire-Statua",
+  "descripcion": "¿Porque las sirenas no juegan al tenis? por miedo a quedarse atrapadas en la red 🧜‍♀️",
+  "administrador": "Dumitru Seco",
+  "imagen": "/catalogo/ilustracion4.png",
+  "categoria": "Ilustraciones",
+  "precio": 1150
+ },
+ {
+  "id": 9,
+  "nombre": "Portal",
+  "descripcion": "El universo abriendo un portal al nunca jamas visto, y por aver... 🌀",
+  "administrador": "Valentina Pacheco",
+  "imagen": "/catalogo/ilustracion3.png",
+  "categoria": "Ilustraciones",
+  "precio": 700
+ },
+ {
+  "id": 10,
+  "nombre": "Auto 1004",
+  "descripcion": "Eh aqui, el Aeromobil. O mas sencillo llamarle auto volador :) 🚗",
+  "administrador": "Mariam Pedrosa",
+  "imagen": "/catalogo/vehiculo.png",
+  "categoria": "Vehículos",
+  "precio": 1005
+ },
+ {
+  "id": 11,
+  "nombre": "Auto 696",
+  "descripcion": "Si llega la tercera guerra mundial, este auto sera uno de los primeros en ponerse a prueba (uso exclusivo del gobierno) ☠️",
+  "administrador": "Alexander Valenzuela",
+  "imagen": "/catalogo/vehiculo2.png",
+  "categoria": "vehículos",
+  "precio": 1200
+ },
+ {
+  "id": 12,
+  "nombre": "Auto Futurista",
+  "descripcion": "El auto futurista no es del futuro, sino del pasado ¿porque? porque viene de blanco y negro ⬜⬛",
+  "administrador": "Orlando Castells",
+  "imagen": "/catalogo/vehiculo3.png",
+  "categoria": "Vehículos",
+  "precio": 1800
+ },
+ {
+  "id": 13,
+  "nombre": "cortinas",
+  "descripcion": "fikfifkdkfkfkdkfkdsfkkdkfdf",
+  "imagen": "",
+  "categoria": "autoss",
+  "precio": "20000"
+ }
+]

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/createProduct.css">
+    <title>Creacion de Producto</title>
+</head>
+<body>
+    <article>
+        <form action="/product/createProduct" method="post" enctype="multipart/form-data">
+            <label for="nombre">Nombre del producto</label>
+            <input type="text" name="nombre" id="product-name">
+            <label for="descricion">Descripcion del producto</label>
+            <textarea type="text" name="descripcion" id="product-description"></textarea>
+            <label for="precio">Precio del producto</label>
+            <input type="number" name="precio" id="product-price">
+            <label for="categoria">Categoria del producto</label>
+            <select name="categoria" id="product-category">
+                <option value="Animales">Animales</option>
+                <option value="Paisajes">Paisajes</option>
+                <option value="Ilustraciones">Ilustraciones</option>
+                <option value="Vehiculos">Vehiculos</option>
+            </select>
+            <label for="product-image" class="custom-file-upload">
+                Elegir imagen del producto
+                <input type="file" name="product-image" id="product-image" accept=".png,.jpg,.webp,.jpeg">
+            </label>
+            <button type="submit">Crear Producto</button>
+        </form>
+    </article>
+</body>
+</html>
