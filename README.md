@@ -1,13 +1,11 @@
 <img src="https://i.imgur.com/zsqtY81.png" width="128"/>
 
-# Artisan
+# Artisanos
 
 ### Paleta de colores:
 ![alt text](https://i.imgur.com/NPARW5M.png)
 
 ### Participantes:
-- Matias Gabriel Quinzan Linares
-- Mateo Guzman
 - Alex Gonzalez
 - Nahuel Liendro
 
