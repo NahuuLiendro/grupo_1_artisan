@@ -25,12 +25,20 @@ app.get("/createProduct", controllerProducts.createProduct);
 app.post("/createProduct", upload.single("product-image"), controllerProducts.procesoCreateProduct);
 
 //RUTA PARA EDITAR UN PRODUCTO
-app.get("/editionProduct", controllerProducts.editionProduct);
+app.get("/editionProduct/:id", controllerProducts.editionProduct);
+
+app.post("/editionProduct/:id", controllerProducts.procesoEditionProduct);
 
 //RUTA PARA EL CARRITO DE COMPRA
 app.get("/productCart", controllerProducts.productCart);
 
 //RUTA PARA DETALLES DE UN PRODUCTO
 app.get("/productDetail/:id", controllerProducts.productDetail);
+
+
+
+app.delete("/:id/delete", controllerProducts.delete);
+
+
 
 module.exports = app

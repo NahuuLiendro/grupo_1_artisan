@@ -25,11 +25,15 @@ SET time_zone = "+00:00";
 
 --
 -- Estructura de tabla para la tabla `categorias`
---
+
+DROP DATABASE IF EXISTS `nfts`;
+CREATE DATABASE `nfts`;
+USE `nfts`;
+
 
 CREATE TABLE `categorias` (
   `id` int(50) NOT NULL,
-  `nombre` varchar(50) NOT NULL
+  `nombre` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -40,11 +44,11 @@ CREATE TABLE `categorias` (
 
 CREATE TABLE `productos` (
   `id` int(50) NOT NULL,
-  `nombre` varchar(30) NOT NULL,
-  `descripcion` varchar(100) NOT NULL,
-  `imegen` varchar(10) NOT NULL,
-  `precio` int(15) NOT NULL,
-  `categoria` varchar(15) NOT NULL
+  `nombre` varchar(255) NOT NULL,
+  `descripcion` varchar(255) NOT NULL,
+  `imagen` varchar(255) NOT NULL,
+  `precio` int(255) NOT NULL,
+  `categoria` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -54,6 +58,7 @@ CREATE TABLE `productos` (
 --
 
 CREATE TABLE `productos_categorias` (
+  `id` int(50) NOT NULL,
   `categoria_id` int(50) NOT NULL,
   `producto_id` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -77,11 +82,11 @@ CREATE TABLE `roles` (
 
 CREATE TABLE `usuarios` (
   `id` int(50) NOT NULL,
-  `nombre` varchar(30) NOT NULL,
-  `apellido` varchar(30) NOT NULL,
-  `email` varchar(40) NOT NULL,
-  `clave` varchar(20) NOT NULL,
-  `foto` varchar(10) NOT NULL,
+  `nombre` varchar(255) NOT NULL,
+  `apellido` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `clave` varchar(255) NOT NULL,
+  `foto` varchar(255) NOT NULL,
   `rol_id` bigint(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 

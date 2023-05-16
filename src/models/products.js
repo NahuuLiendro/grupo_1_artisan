@@ -16,10 +16,28 @@ const productos = {
         }
         return 1;
     },
+    /*editarUnProducto: (req,res) =>{
+        let todosLosProductos = this.todosLosProductos();
+
+        req.body.id = req.params.id;
+
+        req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
+
+        let producto = todosLosProductos.map(producto =>{
+            if(producto.ud == req.body.id){
+                return producto = req.body;
+            }
+            return producto;
+        })
+        let productoActualizar = JSON.stringify(producto,null,2);
+        fs.writeFileSync(this.nombreArchivo,productoActualizar)
+        return producto
+    },*/
     /*editarUnProducto: function (imagen,req,res) {
         let todosLosProductos = this.todosLosProductos();
+        let productoId = req.params.id
         let editar = {
-            id : todosLosProductos.find(id => id == req.params.id),
+            id : todosLosProductos.find(id => id == productoId),
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
             imagen: imagen ? imagen.filename : "",
@@ -29,7 +47,6 @@ const productos = {
         todosLosProductos.push(editar);
         fs.writeFileSync(this.nombreArchivo, JSON.stringify(todosLosProductos, null, " "))
         return editar
-
     },*/
 
     buscarProductoPK: function (id) {
@@ -59,8 +76,15 @@ const productos = {
         return true
     }
 }
+/*console.log(productos.editarUnProducto({
+    id:14,
+    nombre: "alex",
+    descripcion: "sexooooooo",
+    imagen: "....",
+    categoria: "ilustraciones",
+    precio: "90"
 
-
+}))*/
 
 
 module.exports = productos

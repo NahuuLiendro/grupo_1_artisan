@@ -20,9 +20,9 @@
         <!-- Slider Categorias-->
         <section class="swiper">
             <div class="swiper-wrapper">
-                <% datosHome.forEach( dato => { %>
+                <% db.forEach( dato => { %>
                     <a class="swiper-slide categoria" href="#<%=dato.categoria%>">
-                        <img class="category-img" src="images/<%=dato.imagen%>">
+                        <img class="category-img" src="images/catalogo/<%=dato.imagen%>">
                         <h3 class="category-name"><%=dato.categoria%></h3>
                     </a>
                 <% }); %>
@@ -31,7 +31,7 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </section>
-        <% datosHome.forEach( dato => { %>
+        <% db.forEach( dato => { %>
             <%- include("partials/slider", {dato: dato}); %>
         <% }); %>
     </main>

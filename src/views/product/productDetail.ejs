@@ -11,13 +11,17 @@
     <div id="ProductA">
         <div id="ProdImgBG">
             <a id="back" href="javascript: history.go(-1)">◀</a>
-            <img id="ProdImg" src="/images/<%=datoProducto.imagen%>" alt="">
+            <img id="ProdImg" src="/images/catalogo/<%=producto.imagen%>" alt="">
         </div>
         <div id="ProdDetails">
-            <h1 id="ProdTitle"><%=datoProducto.nombre%></h1>
-            <p id="ProdDesc"><%=datoProducto.descripcion%></p>
-            <p id="ProdCredits">Creditos a <%=datoProducto.administrador%></p>
-            <a id="BuyBtn" href="product/productCart">Comprar por $<%=datoProducto.precio%></a>
+            <h1 id="ProdTitle"><%=producto.nombre%></h1>
+            <p id="ProdDesc"><%=producto.descripcion%></p>
+            
+            <a id="BuyBtn" href="product/productCart">Comprar por $<%=producto.precio%></a>
+            <form action="/product/<%=producto.id%>/delete?m=DELETE" method="post">
+                <button type="submit">eliminar producto</button>
+            </form>
+            <a href="/product/editionProduct/<%=producto.id%>">Editar Producto</a>
         </div>
     </div>
     <br>
@@ -49,6 +53,7 @@
                 <span class="product-info">
                     <h4>Precio $1600</h4>
                     <h2>Auto 696</h2>
+                    <p></p>
                 </span>
             </a>
         </section>

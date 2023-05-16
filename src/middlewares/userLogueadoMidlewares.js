@@ -1,15 +1,16 @@
 const User = require("../models/users")
+const db = require("../database/models/index");
 
-function userLogueadiMidlewares(req, res, next) {
+ async function userLogueadiMidlewares(req, res, next) {
     // esto es para preuntar si tenes a alguien en session y para mostrar una parte de la barra de navegacion hacerlo despues
     // y es un middleware de aplicacion 
     res.locals.registrado = false;
     console.log(req.cookies);
     let cookieEmail = req.cookies.user;
 
-    let usurioEnCookie = User.buscarPorCampo("email",cookieEmail);
-
-    if (usurioEnCookie) {
+    //let usurioEnCookie = User.buscarPorCampo("email",cookieEmail);
+    if (cookieEmail) {
+        let usurioEnCookie = await db.Usuario.findOne({where:{ email: cookieEmail }});
         req.session.userLogged = usurioEnCookie
         
     }

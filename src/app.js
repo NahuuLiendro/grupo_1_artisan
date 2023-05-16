@@ -5,6 +5,10 @@ const {resolve} = require("path");
 const cookies = require("cookie-parser");
 const app = express();
 const port = 4060;
+const method = require("method-override")
+
+
+app.use(method("m"))
 
 app.use(session({
     secret: "clave secreta",
@@ -25,6 +29,7 @@ app.use(express.json())
 
 //archivo para poner estatica  y hacer publica la carpeta public
 app.use(express.static(resolve(__dirname,"../public")))
+
 
 app.use(userLogueadoMiddleware);
 //levanto servidor 

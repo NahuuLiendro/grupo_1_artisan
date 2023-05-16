@@ -34,12 +34,16 @@ app.post("/register", upload.single("imagen-usuario"), controllerUsers.procesoDe
 //RUTA PARA MOSTRAR EL PERFIL DEL USUARIO
 app.get("/perfil", autenticarMiddleware, controllerUsers.perfil);
 
-
 //RUTA PARA CERRAR SESSION DE UN USUARIO--> ver como funciona
 app.get("/cerrarSesion", controllerUsers.cerrarSersion);
 
 //RUTA PARA EDITAR UN USUARIO
-app.get("/editarUsuario", controllerUsers.editarUsuario);
+app.get("/editarUsuario/:id", controllerUsers.editarUsuario);
+
+app.post("/editarUsuario/:id",controllerUsers.procesoDeEditarUsuario);
+
+
+//app.get("/eliminarUsuario", controllerUsers.eliminarUsuario);
 
 
 module.exports = app;

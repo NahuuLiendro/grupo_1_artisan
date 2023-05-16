@@ -10,11 +10,8 @@
 </head>
 <body>
     <article>
-        <form action="" id="search-bar">
-            <input type="text" placeholder="Buscar producto por id">
-            <button type="submit" class="fa-sharp fa-solid fa-magnifying-glass logo_lupa"></button>
-        </form>
-        <form action="/product/" method="post" enctype="multipart/form-data">
+        
+        <form action="/product/editionProduct/<%= producto.id%>" method="post">
             <label for="product-name">Nombre del producto</label>
             <input type="text" name="nombre" id="product-name">
             <label for="product-description">Descripcion del producto</label>
