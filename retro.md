@@ -13,6 +13,8 @@ SPRINT 6 = En proceso... :´(
 SPRINT 7 = En proceso... :´(
 
 SPRINT 8 = En proceso... :´(
+
+FINAL DEL PROYECTO = En proceso faltando poquito... :´)
     
  
 SPRINT 2 = En si creemos que hicimos bastante bien las cosas en armar la estructura y organizarnos al momento de trabajar de una forma más rapida y sencilla.
@@ -27,3 +29,5 @@ bastante bien y poder resolver todo lo del CRUD que algunos comopañeros entendi
 
 SPRINT 5 = costo mucho este sprint pero se pudo terminar bien creemos ya que somos solo 2 personas y costo bastante y bueno nos
 quedo cosas atrsadas del anterior sprint terminar pero se pudo bastante bien queda poco en terminar pero bueno creemos que vamos poder terminar bien y completar lo que se pueda del sprint que se viene. 
+
+SPRINT 6 = Este sprint nos gusto estuvo bastante bueno implementar ya la base de datos y pasar todo php admin,costo un poquito por que eran bastante cosas faltan pulir cosas visuales del proyecto pero bien creemos que vamos bien ya falta poquito para terminar solo no hay que bajar los brazos,respecto a aspectos visuales iremos puliendo a fines ya de entregar el proyecto para tenerlo a punto :).
