@@ -2,19 +2,21 @@ const e = require('express');
 let fs = require('fs');
 let datos = JSON.parse(fs.readFileSync('src/data/products.json', 'utf8'));
 const db = require("../database/models/index");
-const { nombreArchivo } = require('../models/products');
-const { where } = require('sequelize');
 
-
-//let datos = [];
-
-/*datosHome.forEach(dato => {
-    datos.push(dato);
-})*/
+const { validationResult } = require("express-validator")
 
 
 const controllerProducts = {
     procesoCreateProduct: async (req, res,) => {
+        let errors = validationResult(req)
+
+        if (errors.errors.length > 0) {
+            return res.render("product/createProduct", { 
+                errors: errors.mapped(),
+                oldData: req.body
+            })
+
+        }
         //let productoParaCrear = productos.procesoCrearUnProducto(req.body, req.file)
         let productoParaCrear = await db.Producto.create({
             nombre: req.body.nombre,
@@ -39,12 +41,20 @@ const controllerProducts = {
         return res.render("product/editionProduct",{producto:detallePruducto})
     },
     procesoEditionProduct: async(req,res)=>{
+        let errors = validationResult(req)
+
+        if (errors.errors.length > 0) {
+            return  res.render("product/editionProduct", { 
+                errors: errors.mapped(),
+                oldData: req.body
+            })
+
+        }
         let editar = await db.Producto.update({
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
             precio: req.body.precio,
             categoria: req.body.categoria,
-            //imagen: req.file.filename,
         }, {
             where: { id: req.params.id }
         })

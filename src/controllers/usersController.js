@@ -1,14 +1,28 @@
 // controladores para usarios
-const Users = require("../models/users");
+//const Users = require("../models/users");
 const bcryptjs = require("bcryptjs");
 //requiero los modelos del objeto db
 const db = require("../database/models/index");
+
+const { validationResult } = require("express-validator")
+
 
 const controllerUsers = {
     login: (req, res) => {
         res.render("users/login")
     },
     procesoDeLogin: async (req, res) => {
+        let errors = validationResult(req)
+
+        if (errors.errors.length > 0) {
+            return res.render("users/login", { 
+                errors: errors.mapped(),
+                oldData: req.body
+            })
+
+        } else {
+
+        }
         // se buscar por campo el email
         //let usuarioParaLoguear = Users.buscarPorCampo("email", req.body.email);
         let usuarioParaLoguear = await db.Usuario.findOne({
@@ -40,6 +54,18 @@ const controllerUsers = {
         res.render("users/register")
     },
     procesoDeRegistro: async (req, res) => {
+        //Validacion para errores para registrar un usuario
+        let errors = validationResult(req)
+
+        if (errors.errors.length > 0) {
+            return res.render("users/register", { 
+                errors: errors.mapped(),
+                oldData: req.body
+            })
+
+        } else {
+
+        }
         // creamos aca el ususario
         let usarioParaRegistrar = await db.Usuario.create({
             nombre: req.body.nombre,
@@ -48,6 +74,7 @@ const controllerUsers = {
             clave: bcryptjs.hashSync(req.body.clave, 10),
             foto: req.file.filename  //req.file.filename : "default.jpg"
         })
+
         return res.redirect("/users/login")
     },
     //fijarse si llamar de la base de datos
@@ -58,13 +85,21 @@ const controllerUsers = {
     },
     editarUsuario: async (req, res) => {
         //**pedir al profe para que me ayude a hacerlo**
-        res.render("users/editarUsuario",{
+        res.render("users/editarUsuario", {
             user: req.session.userLogged
-        }) 
+        })
     },
     procesoDeEditarUsuario: async (req, res) => {
-        console.log(req.params)
-        console.log(req.body)
+        let errors = validationResult(req)
+
+        if (errors.errors.length > 0) {
+            return res.render("users/editarUsuario", { 
+                errors: errors.mapped(),
+                oldData: req.body
+            })
+        }
+
+
         let editar = await db.Usuario.update({
             nombre: req.body.nombre,
             apellido: req.body.apellido,
@@ -72,17 +107,17 @@ const controllerUsers = {
             where: { id: req.params.id }
         })
         console.log(editar)
-        if(editar[0] > 0 ){
+        if (editar[0] > 0) {
 
             req.session.userLogged.nombre = req.body.nombre
             req.session.userLogged.apellido = req.body.apellido
-             return res.redirect("/users/perfil")
+            return res.redirect("/users/perfil")
 
-        }else{
-             return res.send("Error al cargar la informacion")
+        } else {
+            return res.send("Error al cargar la informacion")
 
         }
-        
+
         /// editar[0] > 0 ? res.redirect("/users/perfil") : res.send("Error al cargar la informacion") 
         //return res.redirect("/users/perfil")
     },

@@ -11,7 +11,7 @@
 }
 
 body{
-    background-color: white;
+    background-color: grey;
 }
 
 article img{
@@ -30,19 +30,9 @@ p{
     padding: 15px;
     border-radius: 20px;
     margin-bottom: 20px;
+
 }
 
-section{
-    background-color: white;
-    display: inline-block;
-    position: relative;
-    padding: 15px;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    margin-right: 90px;
-    margin-left: 570px ;
-    border-radius: 20px;
-}
 
 a{
     color: white;
@@ -52,3 +42,34 @@ a{
 .centrar{
     text-align: center;
 }
+
+.articulo-imagen{
+    display: inline-block;
+    position: relative;
+    margin-left: 450px;
+    
+}
+
+
+
+.articulo-datos{
+    display: inline-block;
+    position: relative;
+    margin-top: 500px;
+    margin-left: 570px ;
+    justify-content: space-between;
+}
+
+background-color: white;
+display: inline-block;
+position: relative;
+padding: 15px;
+margin-top: 50px;
+
+justify-content: space-between;
+
+
+margin-bottom: 20px;
+margin-right: 90px;
+
+

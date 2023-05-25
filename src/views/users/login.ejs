@@ -10,13 +10,18 @@
 <body>
     <form action="/users/procesologin" method="post">
         <h1>INICIO DE SESIÓN</h1>
-        <input type="email" name="email" placeholder="Correo">
+        <input type="text" name="email" placeholder="Correo" value="<%= locals.oldData ? oldData.email : null %>" autocomplete="off" >
         <% if (locals.errors && errors.email) { %>
             <div class="">
-                <%= errors.email.msg %>
+                <p class="color-errores"><%= errors.email.msg %></p>
             </div>
         <% } %>
-        <input type="password" name="clave" placeholder="Contraseña">
+        <input type="password" name="clave" placeholder="Contraseña" value="<%= locals.oldData ? oldData.clave : null %>" autocomplete="off">
+        <% if (locals.errors && errors.clave) { %>
+            <div class="">
+                <p class="color-errores"><%= errors.clave.msg %></p>
+            </div>
+        <% } %>
         <h4><input type="radio" name="recordarUsuario">Recordar Usuario</input></h4>
         <span><p>¿No tienes una cuenta? </p><a href="/users/register">Crear cuenta.</a></span>
         <button type="submit">SIGUIENTE</button>

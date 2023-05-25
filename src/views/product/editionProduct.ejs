@@ -12,23 +12,53 @@
     <article>
         
         <form action="/product/editionProduct/<%= producto.id%>" method="post">
+            
             <label for="product-name">Nombre del producto</label>
-            <input type="text" name="nombre" id="product-name">
+            <input type="text" name="nombre" id="product-name" value="<%= locals.oldData ? oldData.nombre : null %>">
+            <% if (locals.errors && errors.nombre) { %>
+                <div>
+                    <p><%= errors.nombre.msg %></p> 
+                </div>
+            <% } %>
+
             <label for="product-description">Descripcion del producto</label>
-            <textarea type="text" name="descripcion" id="product-description"></textarea>
+            <input type="text" name="descripcion" id="product-description"></input>
+            <% if (locals.errors && errors.descripcion) { %>
+                <div>
+                    <p><%= errors.descripcion.msg %></p> 
+                </div>
+            <% } %>
+
             <label for="product-price">Precio del producto</label>
-            <input type="number" name="precio" id="product-price">
-            <label for="product-category">Categoria del producto</label>
+            <input type="number" name="precio" id="product-price"  value="<%= locals.oldData ? oldData.precio : null %>">
+            <% if (locals.errors && errors.precio) { %>
+                <div>
+                    <p><%= errors.precio.msg %></p> 
+                </div>
+            <% } %>
+
+            <label for="categoria">Categoria del producto</label>
             <select name="categoria" id="product-category">
-                <option value="Animales">Animales</option>
-                <option value="Paisajes">Paisajes</option>
-                <option value="Ilustraciones">Ilustraciones</option>
-                <option value="Vehiculos">Vehiculos</option>
+
+                <option value="">Elige una categoria</option>
+                <% 
+                let categorias = ["Animales","Paisajes","Ilustraciones","Vehiculos"]
+                %>
+
+                <% for( const unaCategoria of categorias) { %>
+                <option 
+                    value=" <%= unaCategoria %>"
+                    <% locals.oldData && (unaCategoria === oldData.categoria) ? "selected" : null %>
+                    > <%= unaCategoria %></option>
+                <% } %>
             </select>
-            <label for="product-image" id="custom-file-upload">
-                Elegir imagen del producto
-                <input type="file" name="product-image" id="product-image" accept=".png,.jpg,.webp,.jpeg">
-            </label>
+            <% if (locals.errors && errors.categoria) { %>
+                <div>
+                    <p><%= errors.categoria.msg %></p> 
+                </div>
+            <% } %>
+
+
             <button type="submit">Editar Producto</button>
         </form>
     </article>

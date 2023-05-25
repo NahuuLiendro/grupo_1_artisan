@@ -115,3 +115,7 @@ button {
 button:hover, #custom-file-upload:hover {
     background-color: white;
 }
+
+p{
+    color: #00FF00;
+}

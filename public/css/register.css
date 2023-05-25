@@ -130,6 +130,10 @@ img {
     
 }
 
+p{
+    color: #00FF00;
+}
+
 
 @media (max-width: 900px) {
     body {

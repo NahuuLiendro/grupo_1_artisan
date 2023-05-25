@@ -1,4 +1,4 @@
-const User = require("../models/users")
+//const User = require("../models/users")
 const db = require("../database/models/index");
 
  async function userLogueadiMidlewares(req, res, next) {

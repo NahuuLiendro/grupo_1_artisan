@@ -10,13 +10,35 @@
 <body>
     <form action="/users/register" method="post" enctype="multipart/form-data">
         <h1>REGISTRO DE CUENTA</h1>
-        <input type="text" name="nombre" placeholder="Nombre" >
-        <input type="text" name="apellido" placeholder="Apellido">
-        <input type="email" name="email" placeholder="Correo">
-        <input type="password" name="clave" placeholder="Contraseña">
+        <input type="text" name="nombre" placeholder="Nombre" value="<%= locals.oldData ? oldData.nombre : null %>" >
+        <% if (locals.errors && errors.nombre) { %>
+            <div>
+                <p><%= errors.nombre.msg %></p> 
+            </div>
+        <% } %>
+        <input type="text" name="apellido" placeholder="Apellido"  value="<%= locals.oldData ? oldData.apellido : null %>" >
+        <% if (locals.errors && errors.apellido) { %>
+            <div>
+                <p><%= errors.apellido.msg %></p> 
+            </div>
+        <% } %>
+        
+        <input type="text" name="email"  placeholder="Correo" value="<%= locals.oldData ? oldData.email : null %>" autocomplete="off" >
+        <% if (locals.errors && errors.email) { %>
+            <div>
+                <p><%= errors.email.msg %></p> 
+            </div>
+        <% } %>
+        <input type="password" name="clave" placeholder="Contraseña" value="<%= locals.oldData ? oldData.clave : null %>" autocomplete="off">
+        <% if (locals.errors && errors.clave) { %>
+            <div>
+                <p><%= errors.clave.msg %></p> 
+            </div>
+        <% } %>
+
         <label for="product-image" class="archivo">
              <h3>Elige una imagen de perfil </h3> 
-            <input  type="file" name="imagen-usuario" accept=".png,.jpg,.webp,.jpeg" class="input-imagen"></input>
+            <input  type="file" name="imagen-usuario" accept=".png,.jpg,.webp,.jpeg,.gif" class="input-imagen"></input>
         </label>
         <span><p>¿Tienes una cuenta? </p><a href="/login">Inicia Sesión.</a></span>
         <button type="submit">SIGUIENTE</button>

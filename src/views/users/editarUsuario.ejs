@@ -10,8 +10,18 @@
 <body>
     <form action="/users/editarUsuario/<%=user.id%>" method="post">
         <h1>EDITAR USUARIO</h1>
-        <input type="text" name="nombre" placeholder="Nombre Nuevo" value="<%=user.nombre%>">
-        <input type="text" name="apellido" placeholder="Apellido Nuevo" value="<%=user.apellido%>">
+        <input type="text" name="nombre" placeholder="Nombre Nuevo" value="<%= locals.oldData ? oldData.nombre : null %>">
+        <% if (locals.errors && errors.nombre) { %>
+            <div>
+                <p><%= errors.nombre.msg %></p> 
+            </div>
+        <% } %>
+        <input type="text" name="apellido" placeholder="Apellido Nuevo" value="<%= locals.oldData ? oldData.apellido : null %>">
+        <% if (locals.errors && errors.apellido) { %>
+            <div>
+                <p><%= errors.apellido.msg %></p> 
+            </div>
+        <% } %>
         <button type="submit">Editar Usuario </button>
     </form>
 </body>

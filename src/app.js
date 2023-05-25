@@ -23,8 +23,11 @@ app.use(cookies());
 
 //motor de vistas para ejs  y cambie los archivos html a ejs 
 app.set ('views', resolve(__dirname, 'views'));
+
 app.set("view engine", "ejs");
+
 app.use(express.urlencoded({extended: false}))
+
 app.use(express.json())
 
 //archivo para poner estatica  y hacer publica la carpeta public
@@ -55,9 +58,3 @@ app.use("/users", usersRoutes)
 //AL FINAL DE TODO PARA PULIR
 
 //IMPLEMENTACIÓN DE FUNCIONALIDAD PARA BORRAR UN PRODUCTO-->se borra bien pero fijarse si se puede borrar desde una vista 
-
-
-
-
-
-
