@@ -6,17 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de login</title>
     <link rel="stylesheet" href="/css/login.css">
+    <script src="/js/validatorLogin-front.js"></script>
 </head>
 <body>
-    <form action="/users/procesologin" method="post">
+    <form action="/users/procesologin" method="post" id="formularioLogin">
         <h1>INICIO DE SESIÓN</h1>
-        <input type="text" name="email" placeholder="Correo" value="<%= locals.oldData ? oldData.email : null %>" autocomplete="off" >
+        <div class="errorsLogin">
+            <ul> </ul>
+        </div>
+        <input type="text" id="emailLogin" name="email" placeholder="Correo" value="<%= locals.oldData ? oldData.email : null %>" autocomplete="off" >
         <% if (locals.errors && errors.email) { %>
             <div class="">
                 <p class="color-errores"><%= errors.email.msg %></p>
             </div>
         <% } %>
-        <input type="password" name="clave" placeholder="Contraseña" value="<%= locals.oldData ? oldData.clave : null %>" autocomplete="off">
+        <input type="password" id="contraseñaLogin"name="clave" placeholder="Contraseña" value="<%= locals.oldData ? oldData.clave : null %>" autocomplete="off">
         <% if (locals.errors && errors.clave) { %>
             <div class="">
                 <p class="color-errores"><%= errors.clave.msg %></p>

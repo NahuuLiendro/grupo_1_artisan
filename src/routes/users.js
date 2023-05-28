@@ -16,7 +16,7 @@ const { body } = require("express-validator");
 
 
 
-//VALIDACION PARA REGISTER
+//VALIDACION PARA REGISTER(BACK-END)
 let validacionRegister = [
     //ver si es recomendable el bail
     body("nombre")
@@ -37,7 +37,7 @@ let validacionRegister = [
                 .isLength({min:5,max:20}).withMessage("Este campo es obligatorio y debe tener entre 5 y 20 caracteres"),
 ];
 
-//VALIDACION PARA LOGIN
+//VALIDACION PARA LOGIN(BACK-END)
 let validacionLogin = [
     body("email")
                 .notEmpty().withMessage("Este campo no debe estar vacio").bail()
@@ -48,7 +48,7 @@ let validacionLogin = [
                 .isLength({min:5,max:20}).withMessage("Este campo es obligatorio y debe tener entre 5 y 10 caracteres"),
 ];
 
-//VALIDACION PARA EDITAR USUARIO
+//VALIDACION PARA EDITAR USUARIO(BACK-END)
 let validacionEditarUsuario = [
     body("nombre")
                 .notEmpty().withMessage("Este campo no debe estar vacio").bail()
