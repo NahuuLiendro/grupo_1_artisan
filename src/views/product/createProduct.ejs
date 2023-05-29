@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/createProduct.css">
+    <script src="/js/validatorCreateProduct-front.js"></script>
     <title>Creacion de Producto</title>
 </head>
 <body>
     <article>
-        <form action="/product/createProduct" method="post" enctype="multipart/form-data">
+        <form action="/product/createProduct" method="post" enctype="multipart/form-data" id="formularioCreateProduct">
+            <div class="errorsCreateProduct">
+                <ul> </ul>
+            </div>
             <label for="nombre">Nombre del producto</label>
             <input type="text" name="nombre" id="product-name" value="<%= locals.oldData ? oldData.nombre : null %>">
             <% if (locals.errors && errors.nombre) { %>

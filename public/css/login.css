@@ -175,3 +175,6 @@ img {
         display: none;
     }
 }
+.errorsLogin ul {
+    color: white;
+}
