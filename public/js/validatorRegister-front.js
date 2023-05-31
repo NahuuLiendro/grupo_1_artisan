@@ -35,4 +35,4 @@ window.addEventListener("load", function () {
         console.log(errors)
     }})
 })
-//TODO relacionado con front esta sujeto a cambios
+//TODO relacionado con front esta sujeto a cambios*/

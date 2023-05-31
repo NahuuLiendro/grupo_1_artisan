@@ -43,7 +43,13 @@
 
         <label for="product-image" class="archivo">
              <h3>Elige una imagen de perfil </h3> 
-            <input type="file" id="imagenRegister" name="imagen-usuario" accept=".png,.jpg,.webp,.jpeg,.gif" class="input-imagen"></input>
+            <input type="file" id="imagenRegister" name="imagenUsuario" accept=".png,.jpg,.webp,.jpeg,.gif" class="input-imagen"></input>
+            <% if (locals.errors && errors.imagenUsuario) { %>
+                <div>
+                    <p><%= errors.imagenUsuario.msg %></p> 
+                </div>
+            <% } %>    
+            
         </label>
         <span><p>¿Tienes una cuenta? </p><a href="/login">Inicia Sesión.</a></span>
         <button type="submit">SIGUIENTE</button>

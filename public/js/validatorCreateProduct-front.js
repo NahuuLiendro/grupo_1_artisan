@@ -3,7 +3,6 @@ window.addEventListener("load", function () {
     let nombreCreateProduct = document.querySelector("input#product-name")
     let descripcionCreateProduct = document.querySelector("input#product-description")
     formularioCreateProduct.addEventListener("submit", function (event) {
-        event.preventDefault();
         let errors = []
         if (nombreCreateProduct.value.length < 5) {
             errors.push("El nombre es obligatorio y debe tener al menos 5 caracteres")
@@ -13,6 +12,7 @@ window.addEventListener("load", function () {
         }
         console.log(errors)
         if (errors.length > 0) {
+            event.preventDefault();
             let errorsCreateProduct = document.querySelector("div.errorsCreateProduct ul")
             errorsCreateProduct.innerHTML = "";
             for (let i = 0; i < errors.length; i++) {
@@ -22,4 +22,4 @@ window.addEventListener("load", function () {
             formularioRegister.submit();
         }})
 })
-//TODO relacionado con front esta sujeto a cambios
+//TODO relacionado con front esta sujeto a cambios*/

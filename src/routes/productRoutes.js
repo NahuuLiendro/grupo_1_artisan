@@ -21,7 +21,7 @@ const storage = multer.diskStorage({
 })
 
 //variable para usar en rutas de multer
-const upload = multer({ storage })
+const upload = multer({ storage }) 
 
 
 
@@ -43,16 +43,17 @@ let validacionCrearProducto = [
     body("imagenProducto").custom((value,{req})=>{
 
         let archivo = req.file
-        //let extencion = [".png",".jpg",".webp",".jpeg",".gif"]
+        let extencion = [".png",".jpg",".webp",".jpeg",".gif"]
+        console.log(archivo)
 
         if (!archivo) {
             throw new Error("Tienes que subir una imagen del producto")        
-        }/*else{
-            let imagenExtencion =  path.extname(file.originalname) 
+        }else{
+            let imagenExtencion =  path.extname(archivo.originalname) 
             if (!extencion.includes(imagenExtencion)) {
                 throw new Error("Las extenciones permitadas son:" +  extencion.join(", "))
         }
-    }*/
+    }
     return true
     })
 ];
