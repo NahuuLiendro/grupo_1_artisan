@@ -114,6 +114,11 @@ p{
     color: #00FF00;
 }
 
-.errorsCreateProduct ul {
+.errorsNombreCreateProduct {
+    margin: 20px;
     color: white;
+}
+.errorsDescripcionCreateProduct {
+    margin: 20px;
+    color: white
 }
