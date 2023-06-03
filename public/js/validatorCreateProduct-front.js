@@ -11,8 +11,6 @@ window.addEventListener("load", function () {
         if (descripcionCreateProduct.value.length < 20) {
             errors2.push("La descripcion debe tener al menos 20 caracteres")
         }
-        console.log(errors)
-        console.log(errors2)
         if (errors.length > 0) {
             let errorsNombreCreateProduct = document.querySelector("div.errorsNombreCreateProduct ul")
             errorsNombreCreateProduct.innerHTML = "";
