@@ -43,7 +43,7 @@ CREATE TABLE `categorias` (
 --
 
 CREATE TABLE `productos` (
-  `id` int(50) NOT NULL,
+  `id` int(50)  NOT NULL,
   `nombre` varchar(255) NOT NULL,
   `descripcion` varchar(255) NOT NULL,
   `imagen` varchar(255) NOT NULL,
@@ -139,6 +139,70 @@ ALTER TABLE `categorias`
 --
 ALTER TABLE `productos`
   MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
+  
+  INSERT INTO `productos` (`nombre`, `descripcion`, `imagen`,`precio`,`categoria`) 
+VALUES ("EL DORADO","Se dice que esta imagen produce riqueza infinita, ¿Tú qué opinas? 🤔","imagen-NFTS--1683564861821.png","1200","Paisajes");
+
+
+INSERT INTO `productos` (`nombre`, `descripcion`, `imagen`,`precio`,`categoria`) 
+VALUES ("GALAXYA","Los científicos dicen que es un portal intergaláctico que no se sabe dónde lleva, o quizá es un simple dibujo"
+,"imagen-NFTS--1683565043514.png","1000","Animales");
+
+INSERT INTO `productos` (`nombre`, `descripcion`, `imagen`,`precio`,`categoria`) 
+VALUES ("RISCO MONTAÑOSO","¿Es un risco o una Montaña? con razón las buenas lenguas dicen: las apariencias engañan 😳"
+,"imagen-NFTS--1683565155260.png","7000","Paisajes");
+
+
+INSERT INTO `productos` (`nombre`, `descripcion`, `imagen`,`precio`,`categoria`) 
+VALUES ("PINGUITASTICO","Este NFT es un claro ejemplo de cómo serían los pingüinos si es que nos llegan a dominar el mundo 🌍"
+,"imagen-NFTS--1683565219548.png","1500","Animales");
+
+INSERT INTO `productos` (`nombre`, `descripcion`, `imagen`,`precio`,`categoria`) 
+VALUES ("EL PERRO APOCALIPTICO","El objetivo de este animal, es poder sobrevivir a un apocalipsis. Si es que llega, claro... 🐶"
+,"imagen-NFTS--1683565255980.png","9000","Animales");
+
+INSERT INTO `productos` (`nombre`, `descripcion`, `imagen`,`precio`,`categoria`) 
+VALUES ("MOSTRO","Les presento al MOSTRO, primo hermano de pie grande, pero ¡ten cuidado!, su tamaño es engañoso 👀"
+,"imagen-NFTS--1683565305722.png","2200","Animales");
+
+INSERT INTO `productos` (`nombre`, `descripcion`, `imagen`,`precio`,`categoria`) 
+VALUES ("PINGUINA","Esta pingüina esta buscando pareja ¿! será que alguien podrá ser digno¡?"
+,"imagen-NFTS--1683565506021.png","2200","Animales");
+
+INSERT INTO `productos` (`nombre`, `descripcion`, `imagen`,`precio`,`categoria`) 
+VALUES ("MR PENSANTE","¿Una pintura o ilusión óptica?¿Una persona o el universo devorando un planeta? 😵‍💫"
+,"imagen-NFTS--1683565562988.png","1600","Ilustraciones");
+
+INSERT INTO `productos` (`nombre`, `descripcion`, `imagen`,`precio`,`categoria`) 
+VALUES ("SIRE-STATUA","¿Porque las sirenas no juegan al tenis? por miedo a quedarse atrapadas en la red 🧜‍♀"
+,"imagen-NFTS--1683565605888.png","1150","Ilustraciones");
+
+INSERT INTO `productos` (`nombre`, `descripcion`, `imagen`,`precio`,`categoria`) 
+VALUES ("PORTAL","El universo abriendo un portal al nunca jamas visto, y por aver... 🌀"
+,"imagen-NFTS--1683565656774.png","7000","Ilustraciones");
+
+INSERT INTO `productos` (`nombre`, `descripcion`, `imagen`,`precio`,`categoria`) 
+VALUES ("ELFO","Esto es un elfo de bosque es bastante tierno ¿verdad?"
+,"imagen-NFTS--1683565711212.png","5000","Ilustraciones");
+
+INSERT INTO `productos` (`nombre`, `descripcion`, `imagen`,`precio`,`categoria`) 
+VALUES ("AUTO 1004","Eh aquí, el Aeromóvil. O mas sencillo llamarle auto volador :) 🚗"
+,"imagen-NFTS--1683565756276.png","1300","Vehiculos");
+
+INSERT INTO `productos` (`nombre`, `descripcion`, `imagen`,`precio`,`categoria`) 
+VALUES ("CAMIONETA 4X4","Si llega la tercera guerra mundial, este auto será uno de los primeros en ponerse a prueba (uso exclusivo del gobierno) ☠"
+,"imagen-NFTS--1683565794160.png","1600","Vehiculos");
+
+INSERT INTO `productos` (`nombre`, `descripcion`, `imagen`,`precio`,`categoria`) 
+VALUES ("AUTO FUTURISTA","El auto futurista no es del futuro, sino del pasado ¿por qué? porque viene de blanco y negro ⬜⬛"
+,"imagen-NFTS--1683565861749.png","1800","Vehiculos");
+
+INSERT INTO `productos` (`nombre`, `descripcion`, `imagen`,`precio`,`categoria`) 
+VALUES ("GTI 800","Este hermoso auto es tan bueno que muchos quieren comprarlo, pero pocos pueden."
+,"imagen-NFTS--1683565929058.png","8200","Vehiculos");
+  
+
+
 
 --
 -- AUTO_INCREMENT de la tabla `productos_categorias`

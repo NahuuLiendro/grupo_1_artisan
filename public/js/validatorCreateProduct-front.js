@@ -4,7 +4,6 @@ window.addEventListener("load", function () {
     let descripcionCreateProduct = document.querySelector("input#product-description")
     let imagenCreateProduct = document.querySelector("input#product-image")
     formularioCreateProduct.addEventListener("submit", function (event) {
-        event.preventDefault();
         let errors = []
         if (nombreCreateProduct.value.length < 5) {
             errors.push("El nombre es obligatorio y debe tener al menos 5 caracteres")
@@ -37,3 +36,4 @@ window.addEventListener("load", function () {
         }
     })
 })
+//TODO relacionado con front esta sujeto a cambios

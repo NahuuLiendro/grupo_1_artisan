@@ -25,6 +25,7 @@ const controllerProducts = {
             categoria: req.body.categoria,
             imagen: req.file.filename,
         })
+        console.log(productoParaCrear)
         //if (productoParaCrear) {
             return res.redirect("/")
         //}

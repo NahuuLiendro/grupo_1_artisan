@@ -72,7 +72,7 @@ const controllerUsers = {
             apellido: req.body.apellido,
             email: req.body.email,
             clave: bcryptjs.hashSync(req.body.clave, 10),
-            foto: req.file.filename  //req.file.filename : "default.jpg"
+            foto: req.file ? req.file.filename  : "default.jpg"
         })
 
         return res.redirect("/users/login")

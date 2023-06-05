@@ -8,9 +8,9 @@ SPRINT 4 = COMPLETADO :´)
 
 SPRINT 5 = COMPLETADO :´)
 
-SPRINT 6 = En proceso... :´(
+SPRINT 6 = COMPLETADO :´)
 
-SPRINT 7 = En proceso... :´(
+SPRINT 7 = COMPLETADO :´) 
 
 SPRINT 8 = En proceso... :´(
 
@@ -31,3 +31,6 @@ SPRINT 5 = costo mucho este sprint pero se pudo terminar bien creemos ya que som
 quedo cosas atrsadas del anterior sprint terminar pero se pudo bastante bien queda poco en terminar pero bueno creemos que vamos poder terminar bien y completar lo que se pueda del sprint que se viene. 
 
 SPRINT 6 = Este sprint nos gusto estuvo bastante bueno implementar ya la base de datos y pasar todo php admin,costo un poquito por que eran bastante cosas faltan pulir cosas visuales del proyecto pero bien creemos que vamos bien ya falta poquito para terminar solo no hay que bajar los brazos,respecto a aspectos visuales iremos puliendo a fines ya de entregar el proyecto para tenerlo a punto :).
+
+SPRINT 7 = Este sprint pudimos llegar a terminarlo bastante bien completamos todos nos gusto el tema de validar los formularios con express-validator asi que vamos bien  ya nos queda un sprint por terminar y entregar el proyecto costo pero llegamos hasta esta instancia siendo dos personas pero fue bastante bueno.
+
