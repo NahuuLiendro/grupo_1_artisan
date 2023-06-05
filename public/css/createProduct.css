@@ -114,11 +114,14 @@ p{
     color: #00FF00;
 }
 
-.errorsNombreCreateProduct {
-    margin: 20px;
+div.errorsCreateProduct {
+    margin-top: 50px;
     color: white;
 }
-.errorsDescripcionCreateProduct {
-    margin: 20px;
-    color: white
+.point li::before {
+    content: "•";
+    color: red;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
 }

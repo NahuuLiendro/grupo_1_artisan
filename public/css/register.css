@@ -149,3 +149,12 @@ p{
 .errorsRegister ul {
     color: white;
 }
+
+.errors ul {
+    margin: 20px;
+    color: white;
+}
+
+input#contraseñaRegister {
+    margin: -50px;
+}

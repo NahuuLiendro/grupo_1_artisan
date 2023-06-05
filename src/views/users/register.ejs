@@ -13,7 +13,7 @@
     <form action="/users/register" method="post" enctype="multipart/form-data" id="formularioRegister">
         <h1>REGISTRO DE CUENTA</h1>
         <div class="errorsRegister">
-            <ul> </ul>
+            <ul class="point"> </ul>
         </div>
         <input type="text" id="nombreRegister" name="nombre" placeholder="Nombre" value="<%= locals.oldData ? oldData.nombre : null %>" >
         <% if (locals.errors && errors.nombre) { %>
@@ -21,26 +21,37 @@
                 <p><%= errors.nombre.msg %></p> 
             </div>
         <% } %>
+        <div class="errorsNombreRegister">
+            <ul> </ul>
+        </div>
         <input type="text" id="apellidoRegister" name="apellido" placeholder="Apellido"  value="<%= locals.oldData ? oldData.apellido : null %>" >
         <% if (locals.errors && errors.apellido) { %>
             <div>
                 <p><%= errors.apellido.msg %></p> 
             </div>
         <% } %>
-        
+        <div class="errorsApellidoRegister">
+            <ul> </ul>
+        </div>
         <input type="text" id="emailRegister" name="email"  placeholder="Correo" value="<%= locals.oldData ? oldData.email : null %>" autocomplete="off" >
         <% if (locals.errors && errors.email) { %>
             <div>
                 <p><%= errors.email.msg %></p> 
             </div>
         <% } %>
+        <div class="errorsEmailRegister">
+            <ul> </ul>
+        </div>
+        <span id="emailCorrecto"></span>
         <input type="password" id="contraseñaRegister" name="clave" placeholder="Contraseña" value="<%= locals.oldData ? oldData.clave : null %>" autocomplete="off">
         <% if (locals.errors && errors.clave) { %>
             <div>
                 <p><%= errors.clave.msg %></p> 
             </div>
         <% } %>
-
+        <div class="errorsContraseñaRegister">
+            <ul> </ul>
+        </div>
         <label for="product-image" class="archivo">
              <h3>Elige una imagen de perfil </h3> 
             <input type="file" id="imagenRegister" name="imagen-usuario" accept=".png,.jpg,.webp,.jpeg,.gif" class="input-imagen"></input>

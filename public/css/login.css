@@ -175,6 +175,7 @@ img {
         display: none;
     }
 }
-.errorsLogin ul {
-    color: white;
+div ul  {
+    background-color: black;
+    margin-left: -150px;
 }

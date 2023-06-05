@@ -1,19 +1,19 @@
 window.addEventListener("load", function () {
     let formularioLogin = document.querySelector("form")
     let emailLogin = document.querySelector("input#emailLogin")
-    let contraseñaLogin = document.querySelector("input#contraseñaLogin").value
-    formularioLogin.addEventListener("submit", function (e) {
-        e.preventDefault();
+    let contraseñaLogin = document.querySelector("input#contraseñaLogin")
+    let emailRegister = document.querySelector("input#emailRegister")
+    let contraseñaRegister = document.querySelector("input#contraseñaRegister")
+    formularioLogin.addEventListener("submit", function (event) {
+        event.preventDefault();
         let errors = []
-        if (validandoEmail(emailLogin)) {
-            errors.push("El correo debe ser obligatorio y ser valido")
-        }
-        function validandoEmail(emailLogin) {
-            let regularExpresion = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/
-            return regularExpresion.test(emailLogin)
-        }
-        if (contraseñaLogin.value == "") {
-            errors.push("La contraseña es obligatoria")
+        emailLogin = document.getElementById("emailLogin").value;
+        contraseñaLogin = document.getElementById("contraseñaLogin").value;
+        if (emailRegister === "correo@example.com") {
+            errors.push("El correo es incorrecto")
+        } 
+        if (contraseñaRegister === "password") {
+            errors.push("La contraseña es incorrecta")
         }
         console.log(errors)
         if (errors.length > 0) {
@@ -22,7 +22,8 @@ window.addEventListener("load", function () {
             for (let i = 0; i < errors.length; i++) {
                 errorsLogin.innerHTML += "<li>" + errors[i] + "</li>"//<--esta linea se cambiara pronto <li>
             }
-        } else {
+        } 
+        else {
             formularioLogin.submit();
         }
     })

@@ -11,6 +11,9 @@
 <body>
     <article>
         <form action="/product/createProduct" method="post" enctype="multipart/form-data" id="formularioCreateProduct">
+            <div class="errorsCreateProduct">
+                <ul> </ul>
+            </div>
             <label for="nombre">Nombre del producto</label>
             <input type="text" name="nombre" id="product-name" value="<%= locals.oldData ? oldData.nombre : null %>">
             <% if (locals.errors && errors.nombre) { %>
@@ -18,10 +21,7 @@
                     <p><%= errors.nombre.msg %></p> 
                 </div>
             <% } %>
-            <div class="errorsNombreCreateProduct">
-                <ul> </ul>
-            </div>
-             
+ 
             <label for="descricion">Descripcion del producto</label>
             <input type="text" name="descripcion" id="product-description"></input>
             <% if (locals.errors && errors.descripcion) { %>
@@ -29,9 +29,7 @@
                     <p><%= errors.descripcion.msg %></p> 
                 </div>
             <% } %>
-            <div class="errorsDescripcionCreateProduct">
-                <ul> </ul>
-            </div>
+            
             <label for="precio">Precio del producto</label>
             <input type="number" name="precio" id="product-price" value="<%= locals.oldData ? oldData.precio : null %>">
             <% if (locals.errors && errors.precio) { %>
@@ -61,7 +59,7 @@
                 </div>
             <% } %>
 
-            <label for="product-image" class="custom-file-upload">
+            <label for="product-image" class="custom-file-upload" id="imagenCreateProduct">
                 Elegir imagen del producto
                 <input type="file" name="imagenProducto" id="product-image" accept=".png,.jpg,.webp,.jpeg,.gif">
                 <% if (locals.errors && errors.imagenProducto) { %>
