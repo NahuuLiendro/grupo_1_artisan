@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/perfil.css">
+    <title>Perfil</title>
+</head>
+
+
+<body>
+
+    </div>
+    <main>
+
+        <article class="articulo-imagen">
+            <section>
+                <img src="/images/users/<%= user.foto %>">
+            </section>
+
+        </article>
+
+    </main>
+
+    <header>
+        <article class="articulo-datos">
+            <p>nombre: <%= user.nombre %>
+            </p>
+            <p>apellido: <%= user.apellido %>
+            </p>
+            <p>email: <%= user.email %>
+            </p>
+            <h1>
+                <p class="centrar"><a href="/users/editarUsuario/<%= user.id %> ">Edita tu usuario</a></p>
+            </h1>
+            <h1>
+                <p class="centrar"><a href="/users/cerrarSesion">Cerrar Sesion</a></p>
+            </h1>
+        </article>
+    </header>
+</body>
+</html>

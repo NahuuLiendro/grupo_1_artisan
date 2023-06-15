@@ -1,0 +1,25 @@
+<header>
+    <nav>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+        </script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <ul>
+            
+            <% if (locals.user) { %>
+            <li class="listas"><a href="/product/createProduct">Crear Producto</a></li>
+            <li class="listas"><a href="/users/perfil">Perfil</a></li>
+             <% } else { %>
+                <li class="listas"><a href="/users/register">Registrate</a></li>
+                <li class="listas"><a href="/users/login">Inicia Sesión</a></li>
+            <% } %>
+            <li class="listas"><a href="/product/productCart">Carrito</a></li>
+            
+        </ul>
+    </nav>
+    <!-- Esta es la barra de busqueda -->
+    <div id="container">
+        <input type="text" name="barra_busqueda" placeholder="Ingrese un producto que desee buscar" class="barra_busqueda" >
+        <a href="" class="fa-sharp fa-solid fa-magnifying-glass logo_lupa"></a>
+        <img src="/images/main-image.png" class="imagen_header">
+    </div>
+</header>
