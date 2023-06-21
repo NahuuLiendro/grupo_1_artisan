@@ -2,8 +2,8 @@ const db = require("../database/models/index");
 
 module.exports = {
     listadoCategorias: async (req, res) => {
-        let Categorias = await db.Categoria.findAll();
-
+        let Categorias = await db.Categoria.findAll({include:["productos"]});
+        console.log(Categorias)
         return res.json({
             meta: {
                 status: 200,
@@ -14,8 +14,10 @@ module.exports = {
                 return {
                     id: categoria.id,
                     nombre: categoria.nombre,
+                    productos: categoria.productos
                 }
             })
         })
+        
     }
 }

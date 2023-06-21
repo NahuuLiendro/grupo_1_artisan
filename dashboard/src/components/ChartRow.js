@@ -4,9 +4,10 @@ import React from 'react';
 function ChartRow(props){
     return (
                 <tr>
-                    <td>{props.Title}</td>
-                    <td>{props.Length}</td>
-                    <td>{props.Rating}</td>
+                    <td>{props.Name}</td>
+                    <td>{props.Surname}</td>
+                    <td>{props.Edad}</td>
+                    <td>{props.Email}</td>
                     <td>
                         <ul>
                             {props.Categories.map( (category,i) => 
