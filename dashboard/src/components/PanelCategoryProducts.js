@@ -1,30 +1,37 @@
 import React, { useEffect, useState } from 'react';
 
-const ProductCategoryPanel = ({ products }) => {
-  
+const ProductCategoryPanel = () => {
+  const [categorias, setCategoria] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:4060/api/categorias')
+      .then(response => response.json())
+      .then(data => setCategoria(data.data))
+      .catch(error => console.log(error))
+  }, [])
+  console.log(categorias)
+
   return (
     <div>
       <table>
-        <h2>Listado de Productos</h2>
-        <ul>
-          {products.map((product) => (
-            <li key={product.id}>
-              <p>Nombre{product.name}</p>
-              <p>Descripcion:{product.description}</p>
-              <p>Categoria {product.p}</p>
-            </li>
+        <thead>
+          <h2>Listado de Categorias</h2>
+          <tr>
+            <th>Nombre de Categoria:</th>
+            <th>Cantidad de Productos por Categoria:</th>
+          </tr>
+        </thead>
+        <tbody>
+          {categorias.map(categoria => (
+            <tr key={categorias.id}>
+              <td>{categoria.nombre}</td>
+              <td>{categoria.productos.length}</td>
+            </tr>
           ))}
-        </ul>
+        </tbody>
       </table>
     </div>
   );
 };
 
-const CategoryProductPanel = [
-  {
-    Nombre: "",
-    Categoria: "",
-  }
-]
-console.log(CategoryProductPanel)
-export { ProductCategoryPanel };
+export default ProductCategoryPanel

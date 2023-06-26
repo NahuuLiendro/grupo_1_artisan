@@ -24,10 +24,10 @@
             </p>
 
             <a id="BuyBtn" href="product/productCart">Comprar por $<%=producto.precio%></a>
-            <form action="/product/<%=producto.id%>/delete?m=DELETE" method="post">
-                <button type="submit">eliminar producto</button>
+            <form class="contenedorBotones" action="/product/<%=producto.id%>/delete?m=DELETE" method="post">
+                <button class="estiloBoton" type="submit">eliminar producto</button>
+                <a class="estiloBoton" href="/product/editionProduct/<%=producto.id%>">Editar Producto</a>
             </form>
-            <a href="/product/editionProduct/<%=producto.id%>">Editar Producto</a>
         </div>
     </div>
     <br />

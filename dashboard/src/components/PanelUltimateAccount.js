@@ -1,106 +1,79 @@
 import React, { useEffect, useState } from 'react';
 
 const UserDetailPanel = () => {
-  const [user, setUser] = useState([]);
+  const [users, setUsers] = useState([]);
+  const lastUser = users[users.length - 1];
 
-  /*useEffect(() => {
-    
-    const fetchUser = async () => {
-      try {
-        let response = await fetch('http://localhost:4060/api/users');
-        let data = await response.json();
-        console.log(data)
-        setUser(data);
-      } catch (error) {
-        console.log('Error', error);
-      }
-    };
-
-    fetchUser();
-  }, [userId]);
-  */
-
-  /*const UserFetch = async () => {
-    const [user, setUser] = useState([])
-    useEffect(() => {
-      consumoApi()
-    }, [])
-    const consumoApi = async() => {
-      const data = await fetch("http://localhost:4060/api/users")
-      const dataJson = await data.json()
-      setUser(dataJson)
-    }
-  }
-
-  if (!user) {
-    return <div>Cargando...</div>;
-  }
-  */
   useEffect(() => {
-    fetch("http://localhost:4060/api/users")
-      .then((response) => {
-        return response.json()
-      })
-      .then((user) => {
-        setUser(user)
-      })
-  }, [])
-
-  if (!user) {
-    return <div>Cargando...</div>;
-  }
+    fetch('http://localhost:4060/api/users')
+      .then(response => response.json())
+      .then(data => setUsers(data.data))
+      .catch(error => console.log(error));
+  }, []);
 
   return (
     <div>
-      <table border="1">
+      <h2>Último Usuario Creado</h2>
+      {lastUser && (
+        <table className='tablaPanelUltimateAccount'>
+          <thead>
+            <tr>
+              <th>Nombre:</th>
+              <th>Email:</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{lastUser.nombre}</td>
+              <td>{lastUser.email}</td>
+            </tr>
+          </tbody>
+        </table>
+      )}
+    </div>
+  );
+};
+
+export default UserDetailPanel;
+
+/*import React, { useEffect, useState } from 'react';
+
+const UserDetailPanel = () => {
+  const [users, setUser] = useState([]);
+  const lastUser = users[users.length -1]
+
+  useEffect(() => {
+    fetch('http://localhost:4060/api/users')
+      .then(response => response.json())
+      .then(data => setUser(data.data))
+      .catch(error => console.log(error))
+  }, [])
+
+  return (
+    <div>
+      <table className='tablaPanelUltimateAccount'>
         <thead>
+          <h2>Ultimo Usuario Creado</h2>
           <tr>
-            <th>Nombre</th>
-            <th>Email</th>
+            <th>Nombre:</th>
+            <th width="500px">Email:</th>
           </tr>
         </thead>
         <tbody>
-          {user.map(user => {
-            return (
-              <tr key={user.id}>
-                <td>{user.nombre}</td>
-                <td>{user.email}</td>
-              </tr>
-            );
-          })}
+          {users.map(user => (
+            <tr>
+              <td width="1000px">{lastUser.nombre}</td>
+              <td width="-700px">{lastUser.email}</td>
+            </tr>
+          ))}
         </tbody>
+        <tfoot>
+
+        </tfoot>
       </table>
     </div>
   );
 };
-const DetailUserPanel = [
-  {
-    Nombre: "Pablo",
-    Email: "pacopablo@gmail.com",
-  },
-  {
-    Nombre: "Pepe",
-    Email: "pepote135@gmail.com",
-  },
-  {
-    Nombre: "Carlos",
-    Email: "carlitos165@gmail.com",
-  },
-]
-console.log(DetailUserPanel)
-export { DetailUserPanel }
-export { UserDetailPanel }
-/*return (
-  <div>
-    <table className='detailUserPanel'>
-      <h2>Detalle del Usuario</h2>
-      <p><strong>nombre:</strong> {user.name}</p>
-      <p><strong>email:</strong> {user.email}</p>
-      { }
-    </table>
-  </div>
-);
-}
+
+export default UserDetailPanel
 */
-
-

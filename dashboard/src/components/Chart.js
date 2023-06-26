@@ -1,12 +1,10 @@
 import ChartRow from './ChartRow';
 import React from 'react';
-import { DetailUserPanel } from './PanelUltimateAccount';
-import { ProductListPanel } from './PanelProductListing';
-import { ProductCategoryPanel } from './PanelCategoryProducts';
+import UserDetailPanel from './PanelUltimateAccount';
+import ProductListPanel from './PanelProductListing';
+import ProductCategoryPanel from './PanelCategoryProducts';
 
-console.log(DetailUserPanel)
-console.log(ProductListPanel)
-console.log(ProductCategoryPanel)
+
 //ultima cosa de la pagina
 let tableRowsData = [
     {
@@ -69,7 +67,6 @@ function Chart() {
         nombre: "hola",
 
     }];*/
-
     return (
         /* <!-- DataTales Example --> */
         <div className="card shadow mb-4">
@@ -77,52 +74,34 @@ function Chart() {
                 <div className="table-responsive">
                     <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
                         <thead>
-                        <h2>Listado de productos</h2>
-                            <tr>
-                            
-                                <th>Nombre de Usuario</th>
-                                <th>Apellido</th>
-                                <th>Edad</th>
-                                <th>Email</th>
-                            </tr>
+                            <div>
+                                <UserDetailPanel />
+                            </div>
+                            <br></br>
+                            <div>
+                                <ProductListPanel />
+                            </div>
+                            <br></br>
+                            <div>
+                                <ProductCategoryPanel />
+                            </div>
                         </thead>
                         <tbody>
-                             
-                            <div>
-                                
-                                {productList.map((product) => (
-                                    <div key={product.name}>
-                                        <p>Nombre: {product.name}</p>
-                                        <p>Categoría: {product.category}</p>
-                                        <p>Fecha de creación: {product.creationDate}</p>
-                                        <p>Estado: {product.status}</p>
-                                    </div>
-                                ))}
-                            </div>
+
                         </tbody>
                         <tfoot>
                         </tfoot>
                     </table>
-                    
+
                     <table className='CategoryProduct' id='tableProductCategory' width="100%" cellSpacing="9">
                         <thead>
-                        <h2>Total de productos por categoría</h2>
-                            <tr>
-                                <th>Nombre</th>
-                                <th>Productos Totales</th>
-                            </tr>
+                           
                             <div>
-                                
-                                {categories.map((category) => (
-                                    <p key={category.name}>
-                                        {category.name}: {category.totalProducts}
-                                    </p>
-                                    
-                                ))}
+
                             </div>
                         </thead>
                     </table>
-                        
+
                     <table>
                         <thead>
                             <tr>
